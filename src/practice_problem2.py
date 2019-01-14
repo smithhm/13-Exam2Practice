@@ -3,8 +3,8 @@ PRACTICE Exam 2, practice_problem 2.
 
 Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
          Mark Hays, Amanda Stouder, Aaron Wilkin, their colleagues,
-         and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         and Haiden Smith.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 ###############################################################################
 # Students:
@@ -44,7 +44,7 @@ def main():
 def run_test_practice_problem2a():
     """ Tests the   practice_problem2a  function. """
     # -------------------------------------------------------------------------
-    # TODO: 2. Implement this TEST function.
+    # DONE: 2. Implement this TEST function.
     #   It TESTS the  practice_problem2a  function defined below.
     #   Include at least **   4    ** tests that, taken together,
     #   would form a    ** REASONABLY GOOD test set **
@@ -58,6 +58,37 @@ def run_test_practice_problem2a():
     print('--------------------------------------------------')
     print('Testing the   practice_problem2a   function:')
     print('--------------------------------------------------')
+    print('Test 1')
+    sequence = [2, 10, 5, -20, 8]
+    delta = 6
+    expected = [8, 16, 11, -14, 14]
+    print("expected,", expected)
+    print("actual,  ", practice_problem2a(sequence, delta))
+
+    print()
+    print('Test 2')
+    sequence = [8, -20, 5, 10, 2]
+    delta = 6
+    expected = [14, -14, 11, 16, 8]
+    print("expected,", expected)
+    print("actual,  ", practice_problem2a(sequence, delta))
+
+    print()
+    print('Test 3')
+    sequence = [8, -20, 5, 10, 2]
+    delta = 2
+    expected = [10, -18, 7, 12, 4]
+    print("expected,", expected)
+    print("actual,  ", practice_problem2a(sequence, delta))
+
+    print()
+    print('Test 4')
+    sequence = [8, -20, 5, 10, 2]
+    delta = 4
+    expected = [12, -16, 9, 14, 6]
+    print("expected,", expected)
+    print("actual,  ", practice_problem2a(sequence, delta))
+
 
 
 def practice_problem2a(sequence, delta):
@@ -79,13 +110,16 @@ def practice_problem2a(sequence, delta):
       :type delta:    int
     """
     ###########################################################################
-    # TODO: 3. Implement and test this function.
+    # DONE: 3. Implement and test this function.
     #     WRITE THE TESTS FIRST (above).
     ###########################################################################
     # DIFFICULTY AND TIME RATINGS (see top of this file for explanation)
     #    DIFFICULTY:      5
     #    TIME ESTIMATE:   5 minutes.
     ###########################################################################
+    for k in range(len(sequence)):
+        sequence[k] = sequence[k] + delta
+    return sequence
 
 
 def run_test_practice_problem2b():
@@ -195,6 +229,13 @@ def practice_problem2b(sequence):
     #    TIME ESTIMATE:   10 minutes.
     ###########################################################################
 
+    newthing = ''
+    for k in range(len(sequence)):
+        if len(sequence[k]) == 0:
+            newthing = newthing + ''
+        else:
+            newthing = newthing + sequence[k][0]
+    return newthing
 
 ###############################################################################
 # Our tests use the following to print error messages in red.
