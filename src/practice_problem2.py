@@ -90,7 +90,6 @@ def run_test_practice_problem2a():
     print("actual,  ", practice_problem2a(sequence, delta))
 
 
-
 def practice_problem2a(sequence, delta):
     """
     What comes in:

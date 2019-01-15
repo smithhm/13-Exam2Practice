@@ -111,8 +111,7 @@ class Box(object):
         self.volumeclone = self.volume
         self.newbox = 0
         self.history = []
-        self.ohyeah = ''
-        self.ohno = []
+
 
     def append_string(self, additional_contents):
         """
