@@ -366,6 +366,7 @@ def practice_problem3b(sequence):
             return True
     return False
 
+
 def run_test_practice_problem3c():
     """ Tests the    practice_problem3c    function. """
     print()
@@ -492,6 +493,7 @@ def practice_problem3c(sequence):
         if sequence[k] == 0:
             seq.append(k)
     return seq
+
 
 def run_test_practice_problem3d():
     """ Tests the    practice_problem3d    function. """
@@ -826,6 +828,3 @@ except Exception:
     print()
     time.sleep(1)
     raise
-
-
-
